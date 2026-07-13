@@ -97,6 +97,8 @@ Use for detail, data, chart, form, and analysis pages inside a selected level-2 
 - K-line/candlestick pages are especially sensitive to blur: draw candles, wicks, moving averages, grid lines, labels, and legends natively, and verify at 1920px that small text remains readable.
 - For dense multi-chart analytical pages, keep chart card dimensions, title positions, legends, axis label size, and gutters consistent across cards. The visual priority is clean comparative scanning, not decorative effects.
 - For dense financial tables, rebuild the table with HTML/CSS text and grid lines. Preserve grouped headers, units, year columns, highlight rows, and numeric alignment; avoid using the screenshot image as table content.
+- Any content that contains readable text must be rebuilt as editable text layers in the target artifact. Tables, headers, labels, legends, axes, filters, navigation, and annotations must not be flattened into screenshots.
+- Screenshot or image placeholders are acceptable only for pure drawing/chart plot areas when the user explicitly accepts a placeholder. Even then, surrounding titles, legends, units, axes, labels, controls, and explanatory text should remain editable whenever possible.
 - Use chart colors purposefully: blue/cyan for primary Xingzhi anchors, orange/gold for current-year or highlighted series, red/green only where financial meaning or source emphasis requires it, and muted blue-gray for historical comparison series.
 
 ## Standalone Sharing Rules

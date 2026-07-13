@@ -1,5 +1,5 @@
 interface:
   display_name: "行知 UI 高保真"
-  short_description: "将行知PRD或低保真转成符合规范的APP或网页高保真界面"
+  short_description: "将行知PC端PRD或低保真转成符合规范的网页高保真界面"
   brand_color: "#00A6FA"
-  default_prompt: "Use $xingzhi-ui-hifi to turn this PRD or low-fidelity screenshot into a Xingzhi compliant high-fidelity APP or desktop web UI."
+  default_prompt: "Use $xingzhi-ui-hifi to turn this PRD or low-fidelity screenshot into a Xingzhi compliant high-fidelity PC/Web UI."

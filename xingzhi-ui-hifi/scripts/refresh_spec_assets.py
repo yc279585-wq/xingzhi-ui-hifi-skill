@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Refresh Xingzhi spec text indexes and sample page renders."""
+"""Refresh Xingzhi PC/Web spec text indexes and sample page renders."""
 
 from __future__ import annotations
 
@@ -11,7 +11,6 @@ from PIL import Image, ImageDraw
 from pypdf import PdfReader
 
 
-DEFAULT_DESIGN_PAGES = [2, 3, 6, 8, 11, 12, 20, 21, 25, 29, 35, 39, 40, 41, 44, 45, 46, 50, 52, 56, 58]
 DEFAULT_DOMESTIC_PAGES = [3, 4, 8, 10, 14, 18, 21, 25, 28, 31, 34, 37, 40, 43, 46, 49, 52, 55]
 
 
@@ -86,13 +85,9 @@ def main() -> None:
     refs.mkdir(parents=True, exist_ok=True)
     samples.mkdir(parents=True, exist_ok=True)
 
-    design_pdf = assets / "xingzhi-app-2025-design-spec.pdf"
     domestic_pdf = assets / "domestic-component-spec.pdf"
-    extract_text(design_pdf, refs / "design-text.md", refs / "design-headings.tsv")
     extract_text(domestic_pdf, refs / "domestic-text.md", refs / "domestic-headings.tsv")
-    render_pages(args.pdftoppm, design_pdf, samples, "design", DEFAULT_DESIGN_PAGES, 960)
     render_pages(args.pdftoppm, domestic_pdf, samples, "domestic", DEFAULT_DOMESTIC_PAGES, 1200)
-    contact_sheet(samples, "design")
     contact_sheet(samples, "domestic")
 
 

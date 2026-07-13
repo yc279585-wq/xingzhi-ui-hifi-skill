@@ -1,21 +1,20 @@
-# Xingzhi Design Rules
+# Xingzhi PC/Web Design Rules
 
 ## Source Assets
 
 These rules are derived from the bundled full PDFs:
 
-- `assets/xingzhi-app-2025-design-spec.pdf`: APP design system, 320 pages.
-- `assets/domestic-component-spec.pdf`: domestic/web component system, 55 pages.
+- `assets/domestic-component-spec.pdf`: domestic/web component system.
 
-Use APP rules first for mobile high-fidelity screens. Use the domestic component PDF as a secondary source for general enterprise colors, typography, icon discipline, and web-specific components.
+Use these rules for PC/Web high-fidelity screens only. Do not apply phone-screen navigation, safe-area, touch-specific, or narrow-device layout rules.
 
 ## Core Visual Language
 
-- Primary APP color: `#00A6FA` (APP Blue). Use for primary buttons, active tabs, selected states, links, progress, and major interactive highlights.
+- Primary Xingzhi color: `#00A6FA`. Use for primary buttons, active tabs, selected states, links, progress, and major interactive highlights.
 - Supporting cyan: `#00D2F0`. Use sparingly for gradients, secondary emphasis, charts, or operational accents.
 - Supporting gold/orange: `#D9AF6C`, `#FEAF40`, and domestic warning yellow `#F6A316`. Use for warning, hot tags, highlights, chart accents, or status badges, not as the default primary CTA.
 - Page surfaces are pale gray (`#F5F7FA` / `#F7F9FA`) with white cards and component blocks.
-- The design is compact, financial/institutional, and utility-driven. Avoid marketing-style hero layouts for normal product screens.
+- The design is compact, financial/institutional, and utility-driven. Avoid marketing-style hero layouts for normal PC/Web product screens.
 
 ## Color Tokens
 
@@ -51,28 +50,21 @@ Use the system Chinese UI font stack unless the project already defines a font:
 font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", "Helvetica Neue", Arial, sans-serif;
 ```
 
-APP type scale:
-
-- H1 / 特大标题: 20 px, line-height 28 px, weight 500.
-- H2 / 一级标题: 16 px, line-height 24 px, weight 500.
-- H3 / 二级标题: 14 px, line-height 22 px, weight 500.
-- B1 / 一级文字: 14 px, line-height 22 px, weight 400.
-- B2 / 二级文字: 12 px, line-height 18 px, weight 400.
-- B4 / 三级文字: 10 px, line-height 14 px, weight 400, letter-spacing 0.5 px only when the spec calls for tiny auxiliary text.
-
-Domestic/web type scale, useful for larger panels:
+PC/Web type scale:
 
 - 12/16, 14/18, 16/22, 18/24, 24/32, 32/38, 36/44, 40/48.
+- Keep data, table, chart, and form text mostly in the 12/16, 14/18, 16/22, and 18/24 range.
+- Use 24px and above only for page-level titles or overview screens that truly need display hierarchy.
 
-Keep letter spacing at `0`. Do not use oversized hero typography inside normal app screens.
+Keep letter spacing at `0`. Do not use oversized hero typography inside normal PC/Web product screens.
 
 ## Layout And Spacing
 
-- Design primarily for iPhone-sized mobile screens unless the user specifies another target.
+- Design primarily for a 1920px desktop canvas unless the user specifies another PC/Web target.
 - Use light gray page backgrounds with white cards or list blocks.
-- Use 12 px card/content padding when matching APP card examples; use 16 px page margins for normal mobile screens.
+- Use 16px to 24px card/content padding for normal PC/Web product pages; use denser spacing only for data tables, chart dashboards, or tool panels.
 - Use the spec spacing rhythm: 4 px for tight title-to-meta gaps, then 8, 12, 16, 24, 32 for larger relationships.
-- Radius: tags use 3 pt; drawers/popups use 16 pt; cards and buttons generally use small-to-medium radii from the visual spec. Prefer 8 px for cards/buttons unless matching a page sample with a stronger radius.
+- Radius: tags use small radii around 3px to 4px; cards and buttons generally use 6px to 8px unless matching an existing PC/Web component.
 - Keep dense product pages scannable: title, metadata, value/status, action. Do not stack decorative cards inside cards.
 - Use shadows only to separate floating layers. Domestic shadow reference: `#9198A7` at 25% opacity, x 0, y 0, blur 30.
 
@@ -80,7 +72,7 @@ Keep letter spacing at `0`. Do not use oversized hero typography inside normal a
 
 Use these component patterns when converting low fidelity to high fidelity:
 
-- Navigation bar: compact top bar with clear title and minimal actions; use blue/cyan for active accents and white/light surfaces for dense pages.
+- Navigation: use the HTSC-style full-width dark global top navigation for institutional web pages. Use left side navigation for level-2 modules and tabs/segmented controls for level-3 views.
 - Primary button: blue fill, white text. Bottom primary actions are common for task workflows.
 - Secondary button: white surface with blue border/text.
 - Text button: pure text, optionally paired with an icon, for lower-emphasis actions.
@@ -88,11 +80,10 @@ Use these component patterns when converting low fidelity to high fidelity:
 - Cards: white surface, compact padding, clear title/value hierarchy, no nested cards.
 - Lists and information flows: dense readable rows with title, source/type, time, optional tag, and trailing action/status.
 - Tabs/segmented controls: blue active state, neutral inactive state, clear underline or pill background depending on the sample page.
-- Tab bar: bottom navigation with 2-4 items is explicitly covered in the APP spec.
 - Tags/chips: small radius, blue for selected/brand, orange/gold for warning/hot/highlight, gray for neutral metadata.
 - Forms: support horizontal and vertical layouts; include label, placeholder/value, validation/error, and optional trailing button/switch when the PRD implies it.
 - Empty states: concise Chinese copy, optional illustration, and a single blue primary action when recovery is possible.
-- Popup/drawer: bottom sheet with 16 pt radius, title/subtitle/close control, selection or confirmation content, and a clear confirmation button when required.
+- Modal/dialog/popup: use compact PC/Web modal or dropdown patterns. Avoid narrow-device bottom-sheet behavior unless the user explicitly asks for a responsive adaptation.
 - Data/status screens: prioritize scanability, status color, and next action over decoration.
 
 ## Content Tone
@@ -104,4 +95,4 @@ Use these component patterns when converting low fidelity to high fidelity:
 
 ## Spec Handling
 
-When exact component values are needed, consult `references/component-index.md`, then open the relevant sample PNG or PDF page. If the user's requested screen maps to multiple patterns, prefer APP samples over domestic/web samples.
+When exact component values are needed, consult `references/component-index.md`, then open the relevant domestic/web sample PNG or PDF page.

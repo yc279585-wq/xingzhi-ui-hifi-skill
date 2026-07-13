@@ -1,37 +1,10 @@
 # Xingzhi Component Index
 
-Use this file to locate relevant spec pages quickly. Open the matching PNG in `assets/pdf-samples/` for visual fidelity, then search `references/extracted/*-text.md` for details.
-
-## APP Design Spec
-
-- Colors: page 2, `assets/pdf-samples/design-p002.png`.
-- Font: page 3, `assets/pdf-samples/design-p003.png`.
-- Layout, status bar, tab bar, home indicator, radius: page 6, `assets/pdf-samples/design-p006.png`.
-- Empty states: pages 8-10, `assets/pdf-samples/design-p008.png`.
-- Icons: page 11, `assets/pdf-samples/design-p011.png`.
-- Tabs: page 12, `assets/pdf-samples/design-p012.png`.
-- Switch/radio/checkbox/input number/dot/calendar/loading: pages 13-19.
-- Spacing: page 20, `assets/pdf-samples/design-p020.png`.
-- Shadow: page 21, `assets/pdf-samples/design-p021.png`.
-- Toast: page 22.
-- Notice bar: page 24.
-- Bottom tab bar: page 25, `assets/pdf-samples/design-p025.png`.
-- Result feedback: page 27.
-- Mask/modal overlay: page 28.
-- Card: pages 29-32, `assets/pdf-samples/design-p029.png`.
-- Popup/bottom drawer: pages 35-38, `assets/pdf-samples/design-p035.png`.
-- Button: pages 39-41, `assets/pdf-samples/design-p039.png`, `design-p040.png`, `design-p041.png`.
-- Information flow: pages 42-43.
-- Form: pages 44-46, `assets/pdf-samples/design-p044.png`, `design-p045.png`, `design-p046.png`.
-- Upload: pages 47-49.
-- Search: pages 50-51, `assets/pdf-samples/design-p050.png`.
-- Filter: pages 52-55, `assets/pdf-samples/design-p052.png`.
-- Navigation bar and page header: pages 56-57, `assets/pdf-samples/design-p056.png`.
-- List: page 58, `assets/pdf-samples/design-p058.png`.
+Use this file to locate relevant PC/Web spec pages quickly. Open the matching PNG in `assets/pdf-samples/` for visual fidelity, then search `references/extracted/domestic-text.md` for details.
 
 ## Domestic Component Spec
 
-Use these mostly for web/enterprise component behavior, chart colors, and general typography discipline:
+Use these for web/enterprise component behavior, chart colors, and general typography discipline:
 
 - Typography: pages 2-3, `assets/pdf-samples/domestic-p003.png`.
 - Color: pages 4-5, `assets/pdf-samples/domestic-p004.png`.
@@ -56,5 +29,5 @@ Use these mostly for web/enterprise component behavior, chart colors, and genera
 - PRD contains feed, research, reports, roadshow, news, or recommendations: use Information Flow, Card, Tag, Search, and Filter samples.
 - PRD contains account/profile/project detail: use Navigation, Card, List, Button, and Form samples.
 - Low-fidelity screenshot has repeated rows: convert to List or Information Flow, not decorative cards.
-- Low-fidelity screenshot has a full-screen blank/error/no-permission state: use Empty + Result Feedback.
+- Low-fidelity screenshot has a blank/error/no-permission state: use Feedback/messages plus a clear recovery action.
 - Any screen with more than one primary action must show a clear hierarchy: one primary blue action, secondary outlined/text actions.
